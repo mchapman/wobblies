@@ -1,8 +1,18 @@
-var uploads = {};
+var express = require('express');
+var connectStreamS3 = require('connect-stream-s3');
+var amazon = require('awssum').load('amazon/amazon');
+var fs = require('fs');
+var exec = require('child_process').exec;
+var util = require('util');
 
-uploads.add = function(req, res) {
-  console.log('uploading...');
-  console.log(req.headers);
+var uploads = {}
+
+uploads.initialise = function(app) {    
+  app.post('/upload', uploads.upload);
+  return app;
+};
+
+uploads.upload = function(req, res) {
   var user = req.headers.user;
   if(user == undefined) {
     console.log('missing user');
@@ -21,9 +31,18 @@ uploads.add = function(req, res) {
         console.log('failed to save: ' + err);
         return res.send('failed to save', 500);
       }
-      return res.send();
+
+      console.log('file saved');
+      res.send();
     });
   }
 };
 
 module.exports = uploads;
+
+
+/*
+var access = process.env.WOBBLIES_ACCESS_KEY;
+var secret = process.env.WOBBLIES_ACCESS_SECRET;
+var account = process.env.WOBBLIES_ACCOUNT;
+*/

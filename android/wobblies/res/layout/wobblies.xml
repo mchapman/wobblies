@@ -2,30 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/picture">
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/welcome" />
-    
 	<ImageView 
 	    android:id="@+id/image"
 	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
+	    android:layout_height="fill_parent"
 	    android:padding="5dp"
 	 />
-	
-	<Button android:id="@+id/Delete"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="Delete"
-	        android:onClick="delete"/>
-	
-		<Button android:id="@+id/Upload"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="Upload"
-	        android:onClick="upload"/>
-		
+
 </LinearLayout>
