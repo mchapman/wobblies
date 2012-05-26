@@ -12,12 +12,13 @@
 
 - (MKNetworkOperation *)pushImageToServer:(UIImage *)image
 {
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
-                                   @"Douglas", @"user", nil];
-    
     MKNetworkOperation *op = [self operationWithPath:@"upload"
-                                              params:params
+                                              params:nil
                                           httpMethod:@"POST"];
+    
+    NSMutableDictionary *headers = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
+                                    @"Douglas", @"user", nil];
+    [op addHeaders:headers];
     
     NSData *data = UIImageJPEGRepresentation(image, 0.3);
     
