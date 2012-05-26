@@ -1,0 +1,27 @@
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+.classpath
+.settings/
+
+# generated files
+bin/
+gen/
+tmp/
+libs/
+local.properties
+junit/
+reports/
+
+mprodigy/build.xml
+
+# eclipse meta
+.metadata
+lint.xml
+.checkstyle
