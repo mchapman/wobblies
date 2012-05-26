@@ -25,3 +25,6 @@ mprodigy/build.xml
 .metadata
 lint.xml
 .checkstyle
+
+# webstorm meta
+.idea
