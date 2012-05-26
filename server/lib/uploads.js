@@ -1,9 +1,9 @@
 var express = require('express');
-var connectStreamS3 = require('connect-stream-s3');
-var amazon = require('awssum').load('amazon/amazon');
 var fs = require('fs');
-var exec = require('child_process').exec;
-var util = require('util');
+var knox = require('knox');
+
+var access = process.env.WOBBLIES_ACCESS_KEY;
+var secret = process.env.WOBBLIES_ACCESS_SECRET;
 
 var uploads = {}
 
@@ -13,36 +13,39 @@ uploads.initialise = function(app) {
 };
 
 uploads.upload = function(req, res) {
+  // validate user  
   var user = req.headers.user;
   if(user == undefined) {
     console.log('missing user');
     return res.send('no user', 404);
   }
 
+  // validate files
   if(req.files == undefined) {
-    console.log('missing belly');
-    return res.send('no files', 404);
-  } else {
-    var name = 'uploads/' + user + '_' + req.files.upload.lastModifiedDate.toJSON() + '.jpg';
-    console.log('belly received: ' + name);
+      console.log('missing belly');
+      return res.send('no files', 404);
+  } 
+  
+  // determine uploaded file name
+  console.log('belly received from: ' + user);
+  var name = 'uploads/' + user + '/' + req.files.upload.lastModifiedDate.toJSON() + '.jpg';
 
-    exec("mv " + req.files.upload.path + ' ' + name, function(err) {
-      if(err) {
-        console.log('failed to save: ' + err);
-        return res.send('failed to save', 500);
+  // create knox client for s3 upload
+  var client = knox.createClient({ key: access, secret: secret, bucket: 'wobblies' });
+
+  // load file and upload to bucket
+  fs.readFile(req.files.upload.path, function(err, buf) {
+    var s3req = client.put(name, { 'Content-Length': buf.length 'Content-Type': 'text/plain' });
+
+    s3req.on('response', function(s3res) {
+      if (200 == s3res.statusCode) {
+        console.log('saved to %s', s3req.url);
+        return res.send();
       }
-
-      console.log('file saved');
-      res.send();
+      return res.send();
     });
-  }
+    s3req.end(buf);
+  });    
 };
 
 module.exports = uploads;
-
-
-/*
-var access = process.env.WOBBLIES_ACCESS_KEY;
-var secret = process.env.WOBBLIES_ACCESS_SECRET;
-var account = process.env.WOBBLIES_ACCOUNT;
-*/
