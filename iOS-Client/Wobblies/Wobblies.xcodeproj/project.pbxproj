@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A56068561570F8F400830188 /* dummyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A56068551570F8F400830188 /* dummyImage.png */; };
 		A59E3DEA1570E6F7005E05CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59E3DE91570E6F7005E05CA /* UIKit.framework */; };
 		A59E3DEC1570E6F7005E05CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59E3DEB1570E6F7005E05CA /* Foundation.framework */; };
 		A59E3DEE1570E6F7005E05CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59E3DED1570E6F7005E05CA /* CoreGraphics.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A56068551570F8F400830188 /* dummyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dummyImage.png; sourceTree = "<group>"; };
 		A59E3DE51570E6F7005E05CA /* Wobblies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wobblies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59E3DE91570E6F7005E05CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A59E3DEB1570E6F7005E05CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,6 +115,7 @@
 		A59E3DEF1570E6F7005E05CA /* Wobblies */ = {
 			isa = PBXGroup;
 			children = (
+				A56068551570F8F400830188 /* dummyImage.png */,
 				A59E3DF81570E6F7005E05CA /* AppDelegate.h */,
 				A59E3DF91570E6F7005E05CA /* AppDelegate.m */,
 				A59E3DFB1570E6F7005E05CA /* ViewController.h */,
@@ -228,6 +231,7 @@
 				A59E3DF41570E6F7005E05CA /* InfoPlist.strings in Resources */,
 				A59E3E001570E6F7005E05CA /* ViewController_iPhone.xib in Resources */,
 				A59E3E031570E6F7005E05CA /* ViewController_iPad.xib in Resources */,
+				A56068561570F8F400830188 /* dummyImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +456,7 @@
 				A59E3E1D1570E6F8005E05CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A59E3E1E1570E6F8005E05CA /* Build configuration list for PBXNativeTarget "WobbliesTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +465,7 @@
 				A59E3E201570E6F8005E05CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
