@@ -34,8 +34,11 @@ How old are you [ younger than springtime < 20]
 Are you a  [ Man / Woman ]
 (if girl)  Are you a mum?  [ Yes / No / About to be - (reject them if so)]
 
-Current body type  [ chunky BMI 25-30 ]
-                   [ fat bastard BMI 30+ ]    [calculate your BMI]
+Current body type  [ plumptious BMI 25+ ]
+                   [ quite chubby  BMI 30+ ]    [calculate your BMI]
+                   [ really porky BMI 35+ ]
+                   [ fat bastard 40+ ]
+                   [ jabba the hutt 45+ ]
 
 --- The Stick
 

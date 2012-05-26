@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		A53ADE1A15711E5800C6E5BC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A53ADE1915711E5800C6E5BC /* Default.png */; };
 		A53ADE1D15711E5B00C6E5BC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A53ADE1C15711E5B00C6E5BC /* Default@2x.png */; };
+		A53ADE2515711F1100C6E5BC /* Landing_Screen_Background.png in Resources */ = {isa = PBXBuildFile; fileRef = A53ADE2315711F1100C6E5BC /* Landing_Screen_Background.png */; };
+		A53ADE2915711FEA00C6E5BC /* Landing_Screen_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = A53ADE2815711FEA00C6E5BC /* Landing_Screen_Button.png */; };
 		A5544A4D1571139F00D4C3B4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5544A4C1571139F00D4C3B4 /* MobileCoreServices.framework */; };
+		A55FD9FA15712D2900ECC7C0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A55FD9F915712D2900ECC7C0 /* Icon@2x.png */; };
+		A55FD9FD15712D2B00ECC7C0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A55FD9FC15712D2B00ECC7C0 /* Icon.png */; };
 		A56068561570F8F400830188 /* dummyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A56068551570F8F400830188 /* dummyImage.png */; };
 		A560686C1570FB1F00830188 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A560685B1570FB1F00830188 /* NSData+Base64.m */; };
 		A560686D1570FB1F00830188 /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = A560685D1570FB1F00830188 /* NSDate+RFC1123.m */; };
@@ -30,8 +34,7 @@
 		A59E3DF61570E6F7005E05CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E3DF51570E6F7005E05CA /* main.m */; };
 		A59E3DFA1570E6F7005E05CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E3DF91570E6F7005E05CA /* AppDelegate.m */; };
 		A59E3DFD1570E6F7005E05CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E3DFC1570E6F7005E05CA /* ViewController.m */; };
-		A59E3E001570E6F7005E05CA /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59E3DFE1570E6F7005E05CA /* ViewController_iPhone.xib */; };
-		A59E3E031570E6F7005E05CA /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59E3E011570E6F7005E05CA /* ViewController_iPad.xib */; };
+		A59E3E001570E6F7005E05CA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59E3DFE1570E6F7005E05CA /* ViewController.xib */; };
 		A59E3E0B1570E6F8005E05CA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59E3E0A1570E6F8005E05CA /* SenTestingKit.framework */; };
 		A59E3E0C1570E6F8005E05CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59E3DE91570E6F7005E05CA /* UIKit.framework */; };
 		A59E3E0D1570E6F8005E05CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59E3DEB1570E6F7005E05CA /* Foundation.framework */; };
@@ -52,7 +55,11 @@
 /* Begin PBXFileReference section */
 		A53ADE1915711E5800C6E5BC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		A53ADE1C15711E5B00C6E5BC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		A53ADE2315711F1100C6E5BC /* Landing_Screen_Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Landing_Screen_Background.png; sourceTree = "<group>"; };
+		A53ADE2815711FEA00C6E5BC /* Landing_Screen_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Landing_Screen_Button.png; sourceTree = "<group>"; };
 		A5544A4C1571139F00D4C3B4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A55FD9F915712D2900ECC7C0 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		A55FD9FC15712D2B00ECC7C0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		A56068551570F8F400830188 /* dummyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dummyImage.png; sourceTree = "<group>"; };
 		A560685A1570FB1F00830188 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		A560685B1570FB1F00830188 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
@@ -88,8 +95,7 @@
 		A59E3DF91570E6F7005E05CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A59E3DFB1570E6F7005E05CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A59E3DFC1570E6F7005E05CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A59E3DFF1570E6F7005E05CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		A59E3E021570E6F7005E05CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		A59E3DFF1570E6F7005E05CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		A59E3E091570E6F8005E05CA /* WobbliesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WobbliesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59E3E0A1570E6F8005E05CA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A59E3E121570E6F8005E05CA /* WobbliesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WobbliesTests-Info.plist"; sourceTree = "<group>"; };
@@ -129,6 +135,8 @@
 		A53ADE1E15711E9800C6E5BC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A53ADE2315711F1100C6E5BC /* Landing_Screen_Background.png */,
+				A53ADE2815711FEA00C6E5BC /* Landing_Screen_Button.png */,
 				A53ADE1C15711E5B00C6E5BC /* Default@2x.png */,
 				A53ADE1915711E5800C6E5BC /* Default.png */,
 			);
@@ -223,14 +231,15 @@
 				A53ADE1E15711E9800C6E5BC /* Assets */,
 				A56068571570FB1F00830188 /* Lib */,
 				A56068551570F8F400830188 /* dummyImage.png */,
+				A55FD9FC15712D2B00ECC7C0 /* Icon.png */,
+				A55FD9F915712D2900ECC7C0 /* Icon@2x.png */,
 				A59E3DF81570E6F7005E05CA /* AppDelegate.h */,
 				A59E3DF91570E6F7005E05CA /* AppDelegate.m */,
 				A59E3DFB1570E6F7005E05CA /* ViewController.h */,
 				A59E3DFC1570E6F7005E05CA /* ViewController.m */,
+				A59E3DFE1570E6F7005E05CA /* ViewController.xib */,
 				A56068741570FBB100830188 /* WobbleEngine.h */,
 				A56068751570FBB100830188 /* WobbleEngine.m */,
-				A59E3DFE1570E6F7005E05CA /* ViewController_iPhone.xib */,
-				A59E3E011570E6F7005E05CA /* ViewController_iPad.xib */,
 				A59E3DF01570E6F7005E05CA /* Supporting Files */,
 			);
 			path = Wobblies;
@@ -338,11 +347,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A59E3DF41570E6F7005E05CA /* InfoPlist.strings in Resources */,
-				A59E3E001570E6F7005E05CA /* ViewController_iPhone.xib in Resources */,
-				A59E3E031570E6F7005E05CA /* ViewController_iPad.xib in Resources */,
+				A59E3E001570E6F7005E05CA /* ViewController.xib in Resources */,
 				A56068561570F8F400830188 /* dummyImage.png in Resources */,
 				A53ADE1A15711E5800C6E5BC /* Default.png in Resources */,
 				A53ADE1D15711E5B00C6E5BC /* Default@2x.png in Resources */,
+				A53ADE2515711F1100C6E5BC /* Landing_Screen_Background.png in Resources */,
+				A53ADE2915711FEA00C6E5BC /* Landing_Screen_Button.png in Resources */,
+				A55FD9FA15712D2900ECC7C0 /* Icon@2x.png in Resources */,
+				A55FD9FD15712D2B00ECC7C0 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,20 +431,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A59E3DFE1570E6F7005E05CA /* ViewController_iPhone.xib */ = {
+		A59E3DFE1570E6F7005E05CA /* ViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A59E3DFF1570E6F7005E05CA /* en */,
 			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		A59E3E011570E6F7005E05CA /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A59E3E021570E6F7005E05CA /* en */,
-			);
-			name = ViewController_iPad.xib;
+			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 		A59E3E131570E6F8005E05CA /* InfoPlist.strings */ = {
