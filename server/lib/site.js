@@ -11,7 +11,9 @@ site.initialise = function(app) {
 };
 
 site.home = function(request, response) {
-  response.render('home');
+  response.render('index.jade', {
+      thought_for_the_day : 'For every 1kg of weight you lose, you decrease the risk of diabetes by 9%'
+    });
 };
 
 module.exports = site;
