@@ -12,6 +12,8 @@
 		A53ADE2515711F1100C6E5BC /* Landing_Screen_Background.png in Resources */ = {isa = PBXBuildFile; fileRef = A53ADE2315711F1100C6E5BC /* Landing_Screen_Background.png */; };
 		A53ADE2915711FEA00C6E5BC /* Landing_Screen_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = A53ADE2815711FEA00C6E5BC /* Landing_Screen_Button.png */; };
 		A5544A4D1571139F00D4C3B4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5544A4C1571139F00D4C3B4 /* MobileCoreServices.framework */; };
+		A55FD9FA15712D2900ECC7C0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A55FD9F915712D2900ECC7C0 /* Icon@2x.png */; };
+		A55FD9FD15712D2B00ECC7C0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A55FD9FC15712D2B00ECC7C0 /* Icon.png */; };
 		A56068561570F8F400830188 /* dummyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A56068551570F8F400830188 /* dummyImage.png */; };
 		A560686C1570FB1F00830188 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A560685B1570FB1F00830188 /* NSData+Base64.m */; };
 		A560686D1570FB1F00830188 /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = A560685D1570FB1F00830188 /* NSDate+RFC1123.m */; };
@@ -56,6 +58,8 @@
 		A53ADE2315711F1100C6E5BC /* Landing_Screen_Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Landing_Screen_Background.png; sourceTree = "<group>"; };
 		A53ADE2815711FEA00C6E5BC /* Landing_Screen_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Landing_Screen_Button.png; sourceTree = "<group>"; };
 		A5544A4C1571139F00D4C3B4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A55FD9F915712D2900ECC7C0 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		A55FD9FC15712D2B00ECC7C0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		A56068551570F8F400830188 /* dummyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dummyImage.png; sourceTree = "<group>"; };
 		A560685A1570FB1F00830188 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		A560685B1570FB1F00830188 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 				A53ADE1E15711E9800C6E5BC /* Assets */,
 				A56068571570FB1F00830188 /* Lib */,
 				A56068551570F8F400830188 /* dummyImage.png */,
+				A55FD9FC15712D2B00ECC7C0 /* Icon.png */,
+				A55FD9F915712D2900ECC7C0 /* Icon@2x.png */,
 				A59E3DF81570E6F7005E05CA /* AppDelegate.h */,
 				A59E3DF91570E6F7005E05CA /* AppDelegate.m */,
 				A59E3DFB1570E6F7005E05CA /* ViewController.h */,
@@ -347,6 +353,8 @@
 				A53ADE1D15711E5B00C6E5BC /* Default@2x.png in Resources */,
 				A53ADE2515711F1100C6E5BC /* Landing_Screen_Background.png in Resources */,
 				A53ADE2915711FEA00C6E5BC /* Landing_Screen_Button.png in Resources */,
+				A55FD9FA15712D2900ECC7C0 /* Icon@2x.png in Resources */,
+				A55FD9FD15712D2B00ECC7C0 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
