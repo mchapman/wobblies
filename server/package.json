@@ -17,6 +17,7 @@
     "dependencies": {
       "awssum": "0.6.x",
       "connect-stream-s3" : "0.3.0",
+      "eyes" : "0.1.x",
       "knox" : "0.0.9",
       "express": "2.5.x",
       "jade": "0.26.x"
