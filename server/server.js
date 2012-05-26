@@ -41,5 +41,12 @@ app.post('/upload', function(req, res){
   }
 });
 
+app.get('/video/:user', function(req, res) {
+  var user = req.headers.user;
+  console.log('download belly video for ' + user);
+  
+  return res.send('OK' + user);
+});
+
 app.listen(3000);
 
