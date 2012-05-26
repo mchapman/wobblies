@@ -5,7 +5,8 @@ We are glad you like using Wobblies.  Now things start to get serious.
 In order to carry on using our app you need to do two things:
 
 1.  Pledge to 'expose your future belly' to someone
-    agree to send someone a video of your progress in 3 months (by which time you will be proud of you new physique)
+    agree to send someone a video of your progress in 3 months (by which time you will be proud of you new physique) and
+    take a photo at least once every 3 days for that period.
 2.  Choose an organisation that will benefit if you fail to honour your pledge
     because even if you are starting of with the best intentions we want something to keep you on track
 
@@ -13,15 +14,16 @@ Are you ready?
 [Yes - I'm up for it]
 [Nah - I'm chicken]
 
---- Discovery Page
+--- Find a fat friend
+
 [ Email ] -> Enter the email
 [ facebook ] -> Select from your Facebook friends
 [ Match me! ] (This option will pair you up with someone who we think is 'similar' to you) -> Who are you page
 
 --- Who are you?
 
-How old are you [ spring chicken < 20]
-                [ younger than springtime 20's ]
+How old are you [ younger than springtime < 20]
+                [ spring chicken 20's ]
                 [ the old 30s - 30's ]
                 [ feeling the pace - 40s ]
                 [ the new 30s - 50's ]
@@ -29,10 +31,21 @@ How old are you [ spring chicken < 20]
                 [ retirement age (soon) - 70's ]
                 [ silver surfer - 80 plus ]
 
-Are you a  [ Boy / Girl ]
+Are you a  [ Man / Woman ]
 (if girl)  Are you a mum?  [ Yes / No / About to be - (reject them if so)]
 
-Current body type  [ a few extra pounds BMI ]
-                   [ chunky ]
+Current body type  [ chunky BMI 25-30 ]
+                   [ fat bastard BMI 30+ ]    [calculate your BMI]
 
---- Fine page
+--- The Stick
+
+In the _unlikely_ event that you fail to honour your pledge you need to promise to
+make a payment to one of these three destinations:
+[ NHS preventative fund ]
+[ A charity of your choice... ]
+[ A cause you disapprove of... ]  (many economists feel that the fear of paying for a cause you do not sympathise with is a better motivator than simply spending money)
+
+How much money can you not afford to lose [   ]
+(you need to pledge an amount that will keep you on the straight and narrow)
+
+(need to research pledge / escrow stuff )
