@@ -1,24 +1,31 @@
 package com.nhshackday.wobblies;
 
 import java.io.BufferedInputStream;
-import java.io.BufferedReader;
+import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.DataInputStream;
+import java.io.Closeable;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.InputStreamReader;
-
-import org.xml.sax.InputSource;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -27,15 +34,73 @@ public class Wobblies extends Activity {
 
 	private ImageView image = null;
 	private String fileName = null;
-	private Uri fileUri = null;
+	private String imageName = null;
+	private Uri imageUri = null;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.wobblies);
 		image = (ImageView) findViewById(R.id.image);
+		
 		this.getUri();
-		upload(null);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater menuInflater = getMenuInflater();
+		menuInflater.inflate(R.menu.picture, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.menu_camera:
+			this.Camera();
+			break;
+		case R.id.menu_upload:
+			this.upload();
+			break;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+
+		return true;
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (requestCode != 0) {
+			return;
+		}
+
+		if (resultCode != Activity.RESULT_OK) {
+			return;
+		}
+
+		this.UpdateImage();
+	}
+
+	private void UpdateImage() {
+		if (this.imageUri != null) {
+			this.setImage(this.imageUri);
+			this.fileName = getRealPathFromURI(this.imageUri);
+		}
+	}
+
+	private void Camera() {
+		this.imageName = "wobblies" + System.currentTimeMillis() + ".jpg";
+		ContentValues values = new ContentValues();
+		values.put(MediaStore.Images.Media.TITLE, this.imageName);
+		values.put(MediaStore.Images.Media.DESCRIPTION,
+				"Image capture by camera");
+		this.imageUri = getContentResolver().insert(
+				MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+
+		Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+		intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+		startActivityForResult(intent, 0);
 	}
 
 	private void setImage(Uri uri) {
@@ -46,11 +111,17 @@ public class Wobblies extends Activity {
 		image.setImageURI(uri);
 	}
 
-	@Override
-	protected void onRestart() {
-		// TODO Auto-generated method stub
-		super.onRestart();
-		this.getUri();
+	private void getUri() {
+		Intent intent = getIntent();
+		Bundle bundle = getIntent().getExtras();
+		if (bundle != null) {
+			if (Intent.ACTION_SEND.equals(intent.getAction())) {
+				this.imageUri = (Uri) bundle.get("android.intent.extra.STREAM");
+				this.setImage(this.imageUri);
+				this.fileName = getRealPathFromURI(this.imageUri);
+				Log.e("file name", fileName);
+			}
+		}
 	}
 
 	@Override
@@ -59,21 +130,7 @@ public class Wobblies extends Activity {
 		this.getUri();
 	}
 
-	private void getUri() {
-		Intent intent = getIntent();
-		Bundle bundle = getIntent().getExtras();
-		if (bundle != null) {
-			if (Intent.ACTION_SEND.equals(intent.getAction())) {
-				this.fileUri = (Uri) bundle.get("android.intent.extra.STREAM");
-				this.setImage(this.fileUri);
-				this.fileName = getRealPathFromURI(this.fileUri);
-				Log.e("file name", fileName);
-			}
-		}
-	}
-
 	public String getRealPathFromURI(Uri contentUri) {
-
 		String[] proj = { MediaStore.Images.Media.DATA };
 		Cursor cursor = managedQuery(contentUri, proj, // Which columns to
 				// return
@@ -86,38 +143,46 @@ public class Wobblies extends Activity {
 		return cursor.getString(column_index);
 	}
 
-	private void delete(View view) {
-		if (this.fileName == null) {
-			showError("Ni image to delete");
-			return;
-		}
-		
-	}
-
-	private void upload(View view) {
+	private void upload() {
 		if (this.fileName == null) {
 			showError("Ni image to upload");
 			return;
 		}
 
-		try
-		{
-			
-		RestClient restClient = new RestClient();
+		try {
+			RestClient restClient = new RestClient();
+			byte[] data = getImageBytes();
+			restClient.post("http://192.168.49.149", 3000, data);
+		} catch (Exception e) {
+			Log.e("Wobbies", e.getMessage());
+		}
+	}
 
-		Bitmap bmp= BitmapFactory.decodeFile(this.fileName);
-		ByteArrayOutputStream stream = new ByteArrayOutputStream();
-		bmp.compress(Bitmap.CompressFormat.PNG, 25, stream);
-		byte[] data = new byte[100];
-		byte inc = 0;
-		for(byte value :data) {
-			value = inc++;
-		}
-		restClient.post("http://192.168.49.149/upload", 3000, data);
-		
-		}
-		catch(Exception e) {
-			
+	private byte[] getImageBytes() throws Exception {
+		final ByteArrayOutputStream dataStream = new ByteArrayOutputStream();
+
+		File file = new File(this.fileName);
+		int size = (int) file.length();
+		FileInputStream fs = new FileInputStream(file);
+
+		InputStream in = new BufferedInputStream(fs);
+		BufferedOutputStream out = new BufferedOutputStream(dataStream,
+				(int) size);
+		copy(in, out, (int) size);
+		out.flush();
+		in.close();
+		out.close();
+		final byte[] data = dataStream.toByteArray();
+		dataStream.close();
+		return data;
+	}
+
+	private static void copy(InputStream in, OutputStream out, int size)
+			throws IOException {
+		byte[] b = new byte[size];
+		int read;
+		while ((read = in.read(b)) != -1) {
+			out.write(b, 0, read);
 		}
 	}
 
