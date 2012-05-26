@@ -35,7 +35,7 @@ uploads.upload = function(req, res) {
 
   // load file and upload to bucket
   fs.readFile(req.files.upload.path, function(err, buf) {
-    var s3req = client.put(name, { 'Content-Length': buf.length 'Content-Type': 'text/plain' });
+    var s3req = client.put(name, { 'Content-Length': buf.length, 'Content-Type': 'text/plain' });
 
     s3req.on('response', function(s3res) {
       if (200 == s3res.statusCode) {

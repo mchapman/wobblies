@@ -14,6 +14,11 @@ stream.initialise = function(app) {
 
 stream.get = function(req, res) {
   var user = req.headers.user;
+  if(user == undefined) {
+    console.log('missing user');
+    return res.send('no user', 404);
+  }
+
   console.log('download belly video for ' + user);
   var path = 'videos/sample.mp4';  
   //var path = 'videos/' + user + '.mp4';
