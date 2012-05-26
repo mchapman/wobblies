@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="login">Please enter your email account</string>
+    <string name="app_name">Wobblies</string>
+	<string name="welcome">Welomce to Wobblies</string>
+</resources>
