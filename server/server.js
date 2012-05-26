@@ -36,7 +36,8 @@ app.post('/upload', function(req, res){
     console.log('missing files');
     res.send('no files', 404);
   } else {
-    console.log(req.files);
+    console.log('file received');
+    //console.log(req.files);
     res.send();    
   }
 });
