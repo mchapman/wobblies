@@ -19,15 +19,15 @@ public class Login extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
     
-        login = (EditText)findViewById(R.id.login);
-        
-        this.sharedPreferences = Login.this.getPreferences(MODE_PRIVATE);
-        if(this.sharedPreferences != null) {
-        	String email = this.sharedPreferences.getString("email", null);
-        	if(email != null) {
-        		this.startWobblis();
-        	}
-        }
+//        login = (EditText)findViewById(R.id.login);
+//        
+//        this.sharedPreferences = Login.this.getPreferences(MODE_PRIVATE);
+//        if(this.sharedPreferences != null) {
+//        	String email = this.sharedPreferences.getString("email", null);
+//        	if(email != null) {
+//        		this.startWobblis();
+//        	}
+//        }
     }
 	
 	private void startWobblis() {
@@ -36,12 +36,13 @@ public class Login extends Activity {
 	}
 	
 	public void login(View view) {
-		String email = login.getText().toString();
-		if(email != null && email != "") {
-			Editor editor = this.sharedPreferences.edit(); 
-			editor.putString("email", email);
-			editor.commit();
-		}
+//		
+//		String email = login.getText().toString();
+//		if(email != null && email != "") {
+//			Editor editor = this.sharedPreferences.edit(); 
+//			editor.putString("email", email);
+//			editor.commit();
+//		}
 		
 		this.startWobblis();
 	}
