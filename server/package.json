@@ -21,6 +21,8 @@
       "knox" : "0.0.9",
       "express": "2.5.x",
       "jade": "0.26.x",
+      "yaml" : ">= 0.2.3",
+      "yaml-config" : ">= 0.1.0",
       "mongodb": "1.0.x"
     },
     "devDependencies": {

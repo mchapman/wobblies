@@ -50,9 +50,31 @@ html
             div(data-role="header")
                 h1 Pledge to whom?
             div(data-role="content")
-                div How would you like to choose the person you want to make your pledge to?
+                h4 Good on you!
+                p The first step to a better body has been taken.
+                p The person to whom you make your pledge will receive an email telling them that you are determined to lose that spare tyre, and that in 3 months time they will get a video showing what a brilliant job you have done.
+                p How would you like to choose the person you want to make your pledge to?
                 div(data-role="controlgroup")
                     a(href="#email", data-role="button") Email
-                    a(href="#email", data-role="button") Facebook
-                    a(href="#email", data-role="button") Match Me!
-
+                    //- a(href="#facebook", data-role="button") Facebook
+                    a(href="#match", data-role="button") Match Me!
+        div(data-role="page", id="pledgeto")
+            div(data-role="header")
+                h1 Pledge to whom?
+            div(data-role="content")
+                h4 Good on you!
+                p The first step to a better body has been taken.
+                p The person to whom you make your pledge will receive an email telling them that you are determined to lose that spare tyre, and that in 3 months time they will get a video showing what a brilliant job you have done.
+                p How would you like to choose the person you want to make your pledge to?
+                div(data-role="controlgroup")
+                    a(href="#email", data-role="button") Email
+                    //- a(href="#facebook", data-role="button") Facebook
+                    a(href="#match", data-role="button") Match Me!
+        div(data-role="page", id="email")
+            div(data-role="header")
+                h1 Pledge to email
+            div(data-role="content")
+                form(action="send.php", action="post")
+                    div(data-role="fieldcontainer")
+                        label(for="email") Email
+                        input(type="email", id="email", name="email")
