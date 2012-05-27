@@ -4,13 +4,9 @@ var site = {}
 
 site.initialise = function(app) {    
     app.use(express.static(__dirname + '/../static'));
-	app.set('view engine', 'jade');
-	app.set('view options', { layout: false });
+    app.set('view engine', 'jade');
+    app.set('view options', { layout: false });
     app.get('/', site.home);
-
-    // Load configurations
-    var config_file = require('yaml-config');
-    exports = module.exports = config = config_file.readConfig('config/config.yaml');
 
     var mongodb = require('mongodb');
     var server = new mongodb.Server('127.0.0.1', 27017, {});  // Use local server as dodgy connectivity
