@@ -64,8 +64,15 @@ html
                 p How would you like to choose the person you want to make your pledge to?
                 div(data-role="controlgroup")
                     a(href="#email", data-role="button") Email
-                    //- a(href="#facebook", data-role="button") Facebook
+                    a(href="#comingsoon", data-role="button") Facebook
+                    a(href="#comingsoon", data-role="button") Twitter
                     a(href="#match", data-role="button") Match Me!
+        div(data-role="page", id="comingsoon")
+            div(data-role="header")
+                h1 We are sorry
+            div(data-role="content")
+                h4 Sorry but the feature that you are requesting is currently not available.<br /><br />We are working our spare tyres off trying to add and improve our service.
+                a(href="#pledgeto", data-role="button") Go Back
         div(data-role="page", id="email")
             div(data-role="header")
                 h1 Pledge to email
@@ -105,9 +112,10 @@ html
                     li(data-theme="c")
                         a(href="#other2", data-transition="slide") Jabba the Hutt
                         span(class="ui-li-count") BMI 45+
+                a(href="http://www.bmi-calculator.net/", data-role="button", data-transition="slide") Calculate your BMI
         div(data-role="page", id="other2")
             div(data-role="header")
-                h1 Find a fat friend (2)
+                h1 Find a fat friend
             div(data-role="content")
                 h2 How old are you?
                 ul(data-role="listview", data-divider-theme="b", data-inset="true")
