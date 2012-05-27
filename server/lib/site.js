@@ -30,7 +30,7 @@ site.initialise = function(app) {
 
 site.home = function(request, response) {
   response.render('index.jade', {
-      thought_for_the_day : "randemo text"
+      thought_for_the_day : site.thoughts_for_the_day[Math.floor(Math.random()*site.thoughts_for_the_day.length)].txt
     });
 };
 
