@@ -17,11 +17,13 @@ stream.initialise = function(app) {
 stream.get = function(req, res) {
 
   // check user is in headers
+  /*
   var user = req.headers.user;
   if(user == undefined) {
     console.log('missing user');
     return res.send('no user', 404);
   }
+  */
 
   console.log('download belly video for ' + user);
 

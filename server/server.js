@@ -4,6 +4,12 @@ var site = require('./lib/site');
 var uploads = require('./lib/uploads');
 var stream = require('./lib/stream');
 
+var port = process.argv[2];
+if(port == undefined) {
+  console.log('missing port');
+  exit;
+}
+
 // create the app and paths
 var app = module.exports = express.createServer();
 
@@ -16,5 +22,4 @@ site.initialise(app);
 stream.initialise(app);
 
 // start the server and listen on 80
-app.listen(3000);
-
+app.listen(port);
