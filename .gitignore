@@ -28,3 +28,5 @@ lint.xml
 
 # webstorm meta
 .idea
+
+server/config/config.yaml
