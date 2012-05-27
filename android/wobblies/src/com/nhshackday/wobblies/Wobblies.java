@@ -3,30 +3,24 @@ package com.nhshackday.wobblies;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.Closeable;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -36,13 +30,16 @@ public class Wobblies extends Activity {
 	private String fileName = null;
 	private String imageName = null;
 	private Uri imageUri = null;
+	private ProgressDialog progressDialog = null;
+	private final static String host = "http://192.168.49.149";
+	private final static int port = 3000;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.wobblies);
 		image = (ImageView) findViewById(R.id.image);
-		
+
 		this.getUri();
 	}
 
@@ -108,7 +105,11 @@ public class Wobblies extends Activity {
 			return;
 		}
 
-		image.setImageURI(uri);
+		try {
+			image.setImageURI(uri);
+		} catch (Exception exception) {
+			Log.e("Wobblies", exception.getMessage());
+		}
 	}
 
 	private void getUri() {
@@ -149,12 +150,17 @@ public class Wobblies extends Activity {
 			return;
 		}
 
-		try {
+		 this.progressDialog = ProgressDialog.show(this, "Please wait...", "Uploading image", true, false);
+		
+		 try {
 			RestClient restClient = new RestClient();
 			byte[] data = getImageBytes();
-			restClient.post("http://192.168.49.149", 3000, data);
+			restClient.post(host, port, data, this.fileName);
 		} catch (Exception e) {
 			Log.e("Wobbies", e.getMessage());
+		}
+		finally {
+			this.progressDialog.dismiss();
 		}
 	}
 

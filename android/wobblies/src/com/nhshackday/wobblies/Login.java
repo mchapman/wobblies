@@ -2,17 +2,15 @@ package com.nhshackday.wobblies;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
 public class Login extends Activity {
     /** Called when the activity is first created. */
     
-	private EditText login = null;
-	private SharedPreferences sharedPreferences  = null;
+	//private EditText login = null;
+	//private SharedPreferences sharedPreferences  = null;
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,7 +33,19 @@ public class Login extends Activity {
 		startActivity(intent);
 	}
 	
-	public void login(View view) {
+	private void startVideo() {
+		Intent intent = new Intent(Login.this, Video.class);
+		startActivity(intent);
+	}
+	
+	public void watch(View view) {
+		String url = "http://192.168.49.149:3000/";
+		Intent i = new Intent(Intent.ACTION_VIEW);
+		i.setData(Uri.parse(url));
+		startActivity(i);
+	}
+	
+	public void capture(View view) {
 //		
 //		String email = login.getText().toString();
 //		if(email != null && email != "") {
@@ -45,5 +55,9 @@ public class Login extends Activity {
 //		}
 		
 		this.startWobblis();
+	}
+	
+	public void video(View view) {
+		this.startVideo();
 	}
 }
