@@ -11,12 +11,26 @@
         
     </LinearLayout>
     <Button android:id="@+id/save"
-        android:onClick="login"
+        android:onClick="capture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:padding="10dp"
-        android:background="@drawable/capture"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:text="Capture"
+        android:background="@drawable/button"
       />
 
+      <Button android:id="@+id/video"
+        android:onClick="video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:text="Watch your progress"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button"/>
+     
 </LinearLayout>
