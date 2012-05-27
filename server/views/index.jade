@@ -71,4 +71,86 @@ html
             div(data-role="header")
                 h1 My Progress
             div(data-role="content")
-                iframe(width="315",height="202",src="http://www.youtube.com/embed/VgcUH0Ex6pU&t",frameborder="0",allowfullscreen)
+                <video width="320" height="240" controls="controls">
+                <source src="http://192.168.49.149:3000/video/user" type="video/mp4" />
+                </video>
+        div(data-role="page", id="match")
+            div(data-role="header")
+                h1 Find a fat friend
+            div(data-role="content")
+                h2 How would you describe your figure?
+                ul(data-role="listview", data-divider-theme="b", data-inset="true")
+                    li(data-theme="c")
+                        a(href="#other2", data-transition="slide") Plumptious
+                        span(class="ui-li-count") BMI 25+
+                    li(data-theme="c")
+                        a(href="#other2", data-transition="slide") Quite Chubby
+                        span(class="ui-li-count") BMI 30+
+                    li(data-theme="c")
+                        a(href="#other2", data-transition="slide") Really Porky
+                        span(class="ui-li-count") BMI 35+
+                    li(data-theme="c")
+                        a(href="#other2", data-transition="slide") Fat Bastard
+                        span(class="ui-li-count") BMI 40+
+                    li(data-theme="c")
+                        a(href="#other2", data-transition="slide") Jabba the Hutt
+                        span(class="ui-li-count") BMI 45+
+        div(data-role="page", id="other2")
+            div(data-role="header")
+                h1 Find a fat friend (2)
+            div(data-role="content")
+                h2 How old are you?
+                ul(data-role="listview", data-divider-theme="b", data-inset="true")
+                    li(data-theme="c")
+                        a(href="#other3", data-transition="slide") Younger than springtime
+                        span(class="ui-li-count") < 20
+                    li(data-theme="c")
+                        a(href="#other3", data-transition="slide") Spring Chicken
+                        span(class="ui-li-count") 20's
+                    li(data-theme="c")
+                        a(href="#other3", data-transition="slide") The old 30s
+                        span(class="ui-li-count") 30's
+                    li(data-theme="c")
+                        a(href="#other3", data-transition="slide") Feeling the pace
+                        span(class="ui-li-count") 40's
+                    li(data-theme="c")
+                        a(href="#other3", data-transition="slide") The new 30s
+                        span(class="ui-li-count") 50's
+                    li(data-theme="c")
+                        a(href="#other3", data-transition="slide") Retirement age (now)
+                        span(class="ui-li-count") 60's
+                    li(data-theme="c")
+                        a(href="#other3", data-transition="slide") Retirement age (soon)
+                        span(class="ui-li-count") 70's
+                    li(data-theme="c")
+                        a(href="#other3", data-transition="slide") Silver surfer
+                        span(class="ui-li-count") 80's
+        div(data-role="page", id="other3")
+            div(data-role="header")
+                h1 Find a fat friend
+            div(data-role="content")
+                h2 Are you a Man/Woman?
+                ul(data-role="listview", data-divider-theme="b", data-inset="true")
+                    li(data-theme="c")
+                        a(href="#forfeit", data-transition="slide") Man
+                    li(data-theme="c")
+                        a(href="#other4", data-transition="slide") Woman
+        div(data-role="page", id="other4")
+            div(data-role="header")
+                h1 Find a fat friend
+            div(data-role="content")
+                h2 Are you a mother?
+                a(data-role="button", data-transition="slide", href="#forfeit") Yes
+                a(data-role="button", data-transition="slide", href="#forfeit") No
+        div(data-role="page", id="forfeit")
+            div(data-role="header")
+                h1 Take your pick
+            div(data-role="content")
+                h2 In the _unlikely_ event that you fail to honour your pledge you need to promise to make a payment to one of these three destinations:
+                ul(data-role="listview", data-divider-theme="b", data-inset="true")
+                    li(data-theme="c")
+                        a(href="#", data-transition="slide") NHS preventative fund
+                    li(data-theme="c")
+                        a(href="#", data-transition="slide") A charity of your choice...
+                    li(data-theme="c")
+                        a(href="#", data-transition="slide") A cause you disapprove of... (many economists feel that the fear of paying for a cause you do not sympathise with is a better motivator than simply spending money)
