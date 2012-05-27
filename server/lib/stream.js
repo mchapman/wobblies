@@ -13,9 +13,17 @@ stream.initialise = function(app) {
   return app;
 };
 
+/*
+Sample HTML Video tag
+<video width="320" height="240" controls="controls">
+  <source src="http://localhost:3333/video/roy" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+*/
+
 // get handler
 stream.get = function(req, res) {
-
+  var user = req.params.user;
   // check user is in headers
   /*
   var user = req.headers.user;
