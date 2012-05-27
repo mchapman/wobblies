@@ -1,181 +1,74 @@
-  !!! html
-  html
-      head
-	  meta(charset="utf-8")
-	  meta(name="viewport", content="width=device-width, initial-scale=1")
-	  title="Wobblies"
-	  //- putting these locally for now as I am having connectivity problems
-	  //- link(rel="stylesheet", href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css")
-	  link(rel="stylesheet", href="/css/jquery.mobile-1.1.0.min.css")
-	  //- script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
-	  script(src="/js/jquery.min.js")
-	  //- script(src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js")
-	  script(src="/js/jquery.mobile-1.1.0.min.js")
-	  script
-	      var _gaq = _gaq || [];
-	      _gaq.push(['_setAccount', 'UA-32151254-1']);
-	      _gaq.push(['_trackPageview']);
+!!! html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        title="Wobblies"
+        //- putting these locally for now as I am having connectivity problems
+        //- link(rel="stylesheet", href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css")
+        link(rel="stylesheet", href="/css/jquery.mobile-1.1.0.min.css")
+        //- script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
+        script(src="/js/jquery.min.js")
+        //- script(src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js")
+        script(src="/js/jquery.mobile-1.1.0.min.js")
+        script
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-32151254-1']);
+            _gaq.push(['_trackPageview']);
 
-	      (function() {
-	      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	      })();
-      body
-	  div(data-role="page", id="landing")
-	      div(data-role="content")
-		  div
-		      img(style="width: 100%; height: px", src="/img/Wobblies_Logo.png")
-		  div(data-role="collapsible", data-collapsed="false")
-		      h2 Thought for the Day
-		      p
-			  #{thought_for_the_day}
-		  div(data-role="collapsible", data-collapsed="true")
-		      h2 What is Wobblies?
-		      p
-			  |Wobbli.es is a mobile app that was developed in two days at the&nbsp;
-			  a(href="http://nhshackday.com/")
-			      |NHS Hackday
-			  |. It is deliberately "in your face"
-			  |app, pulling no punches about trying to draw people's attention to - and then combat - obesity, which costs the NHS £2
-			  |billion/year (more than the Dilnot report says it would cost to properly fund social care).<br /> <br /> 
-			  |You can use it privately for a period, taking pictures of your belly and watching them play back as a (rather primitive - for now) video.<br /> <br /> 
-			  |After the introductory period you will be forced to <em> pledge</em>  - promise to show someone (who will normally be making the same promise to you)
-			  |three months worth of belly videos.  And just in case that doesn't focus the mind, if you fail to keep coming back and
-			  |take the photos, you will be have to make a contribution to a good cause of your choice.
-		  div(data-role="controlgroup")
-		      a(href="#", data-role="button") Upload a Private Photo
-		      a(href="#pledgeto", data-role="button") Be Brave and Pledge
-	  div(data-role="page", id="pledgeto")
-	      div(data-role="header")
-		  h1 Pledge to whom?
-	      div(data-role="content")
-		  h4 Good on you!
-		  p The first step to a better body has been taken.
-		  p The person to whom you make your pledge will receive an email telling them that you are determined to lose that spare tyre, and that in 3 months time they will get a video showing what a brilliant job you have done.
-		  p How would you like to choose the person you want to make your pledge to?
-		  div(data-role="controlgroup")
-		      a(href="#email", data-role="button") Email
-		      //- a(href="#facebook", data-role="button") Facebook
-		      a(href="#match", data-role="button") Match Me!
-	  div(data-role="page", id="pledgeto")
-	      div(data-role="header")
-		  h1 Pledge to whom?
-	      div(data-role="content")
-		  h4 Good on you!
-		  p The first step to a better body has been taken.
-		  p The person to whom you make your pledge will receive an email telling them that you are determined to lose that spare tyre, and that in 3 months time they will get a video showing what a brilliant job you have done.
-		  p How would you like to choose the person you want to make your pledge to?
-		  div(data-role="controlgroup")
-		      a(href="#email", data-role="button") Email
-		      //- a(href="#facebook", data-role="button") Facebook
-		      a(href="#match", data-role="button") Match Me!
-	  div(data-role="page", id="email")
-	      div(data-role="header")
-		  h1 Pledge to email
-	      div(data-role="content")
-		  form(action="send.php", action="post")
-		      div(data-role="fieldcontainer")
-			  label(for="email") Email
-			  input(type="email", id="email", name="email")
-	  div(data-role="page", id="match")
-	      div(data-role="header")
-		  h1 Find a fat friend
-	      div(data-role="content")
-		h2 How would you describe your figure?
-		ul data-role="listview" data-divider-theme="b" data-inset="true" 
-		li data-theme="c" 
-			a href="#other2" data-transition="slide" 
-			      Plumptious  
-			span class="ui-li-count" BMI 25+
-		      li data-theme="c" 
-			  a href="#other2" data-transition="slide" 
-			      Quite chubby
-			  span class="ui-li-count" BMI 30+
-		      li data-theme="c" 
-			  a href="#other2" data-transition="slide" 
-			      Really Porky
-			  span class="ui-li-count" BMI 35+
-		      li data-theme="c" 
-			a href="#other2" data-transition="slide" 
-			      Fat Bastard
-			span class="ui-li-count" BMI 40+
-		      li data-theme="c"
-			  a href="#other2" data-transition="slide" 
-			      Jabba the Hutt
-			  span class="ui-li-count"BMI 45+
-	  div(data-role="page", id="other2")
-	      div(data-role="header")
-		  h1 Find a fat firend
-	  div(data-role="content")
-		h2 How old are you?
-		ul data-role="listview" data-divider-theme="b" data-inset="true"
-			li data-theme="c"
-			    a href="other3.html" data-transition="slide"
-				Younger Than SpringTime
-			li data-theme="c"
-			    a href="other3.html" data-transition="slide"
-				Spring Chicken
-			li data-theme="c"
-			    a href="other3.html" data-transition="slide"
-				The old 30s
-			li data-theme="c"
-			    a href="other3.html" data-transition="slide"
-				Feeling the pace
-			li data-theme="c"
-			    a href="other3.html" data-transition="slide"
-				The new 30s
-			li data-theme="c"
-			    a href="other3.html" data-transition="slide"
-				Retirement age (now)
-			li data-theme="c"
-			    a href="other3.html" data-transition="slide"
-				Retirement age (soon)
-			li data-theme="c"
-			    a href="other3.html" data-transition="slide"
-			      Silver surfer
-	  div(data-role="page", id="other3")
-	      div(data-role="header")
-		  h1 Find a fat friend
-	  div(data-role="content")
-		  h2 Are you a Man/Woman?
-	  ul data-role="listview" data-divider-theme="b" data-inset="true"
-		      li data-theme="c"
-			  a href="#forfeit" data-transition="slide"
-			      Man
-		      li data-theme="c"
-			  a href="#other4" data-transition="slide"
-			      Woman
-	  div(data-role="page", id="other4")
-	      div(data-role="header")
-		    h1 Find a fat friend
-	  div(data-role="content")
-		  h2 Are you a mother?
-	  a data-role="button" data-transition="fade" href="#forfeit"
-		      Yes
-		  a data-role="button" data-transition="slide" href="#forfeit"
-		      No
-	  div(data-role="page,id="forfeit")
-	      div(data-role="header")
-		    h1 Take your pick
-	  div(data-role="content")
-	      h3
-		  In the _unlikely_ event that you fail to honour your pledge you need to promise to make a payment to one of these three destinations:
-		      h3
-		      ul data-role="listview" data-divider-theme="b" data-inset="true"
-			  li data-theme="c"
-			      a href="#page1" data-transition="slide"
-				  NHS preventative fund
-			      a
-			  li
-			  li data-theme="c"
-			      a href="#page1" data-transition="slide"
-				  A charity of your choice...
-			      a
-			  li
-			  li data-theme="c"
-			      a href="#page1" data-transition="slide"
-				  A cause you disapprove of... (many economists feel that the fear of paying for a cause you do not sympathise with is a better motivator than simply spending money)
-			      a
-			  li
-		      ul
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+    body
+        div(data-role="page", id="landing")
+            div(data-role="content")
+                div
+                    img(style="width: 100%; height: px", src="/img/Wobblies_Logo.png")
+                div(data-role="collapsible", data-collapsed="false")
+                    h2 Thought for the Day
+                    p
+                        #{thought_for_the_day}
+                div(data-role="collapsible", data-collapsed="true")
+                    h2 What is Wobblies?
+                    p
+                        |Wobbli.es is a mobile app that was developed in two days at the&nbsp;
+                        a(href="http://nhshackday.com/")
+                            |NHS Hackday
+                        |. It is deliberately "in your face"
+                        |app, pulling no punches about trying to draw people's attention to - and then combat - obesity, which costs the NHS £2
+                        |billion/year (more than the Dilnot report says it would cost to properly fund social care).<br /><br />
+                        |You can use it privately for a period, taking pictures of your belly and watching them play back as a (rather primitive - for now) video.<br /><br />
+                        |After the introductory period you will be forced to <em>pledge</em> - promise to show someone (who will normally be making the same promise to you)
+                        |three months worth of belly videos.  And just in case that doesn't focus the mind, if you fail to keep coming back and
+                        |take the photos, you will be have to make a contribution to a good cause of your choice.
+                div(data-role="controlgroup")
+                    a(href="#", data-role="button") Upload a Private Photo
+                    a(href='#video', data-role="button") Show my Video
+                    a(href="#pledgeto", data-role="button") Be Brave and Pledge
+        div(data-role="page", id="pledgeto")
+            div(data-role="header")
+                h1 Pledge to whom?
+            div(data-role="content")
+                h4 Good on you!
+                p The first step to a better body has been taken.
+                p The person to whom you make your pledge will receive an email telling them that you are determined to lose that spare tyre, and that in 3 months time they will get a video showing what a brilliant job you have done.
+                p How would you like to choose the person you want to make your pledge to?
+                div(data-role="controlgroup")
+                    a(href="#email", data-role="button") Email
+                    //- a(href="#facebook", data-role="button") Facebook
+                    a(href="#match", data-role="button") Match Me!
+        div(data-role="page", id="email")
+            div(data-role="header")
+                h1 Pledge to email
+            div(data-role="content")
+                form(action="send.php", action="post")
+                    div(data-role="fieldcontainer")
+                        label(for="email") Email
+                        input(type="email", id="email", name="email")
+        div(data-role="page", id="video")
+            div(data-role="header")
+                h1 My Progress
+            div(data-role="content")
+                iframe(width="315",height="202",src="http://www.youtube.com/embed/VgcUH0Ex6pU&t",frameborder="0",allowfullscreen)
