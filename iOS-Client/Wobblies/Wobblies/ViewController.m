@@ -59,6 +59,11 @@
     cameraUI.delegate = self;
     cameraUI.cameraOverlayView = [self createCameraOverlay];
     
+    if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront])
+    {
+        cameraUI.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+    }
+    
     [self presentModalViewController:cameraUI animated: YES];
     return YES;
 }
