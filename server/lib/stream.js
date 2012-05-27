@@ -24,14 +24,6 @@ Sample HTML Video tag
 // get handler
 stream.get = function(req, res) {
   var user = req.params.user;
-  // check user is in headers
-  /*
-  var user = req.headers.user;
-  if(user == undefined) {
-    console.log('missing user');
-    return res.send('no user', 404);
-  }
-  */
 
   console.log('download belly video for ' + user);
 
