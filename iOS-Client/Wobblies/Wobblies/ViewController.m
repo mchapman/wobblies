@@ -21,7 +21,7 @@
     // remote production server
 //    wobbleEngine = [[WobbleEngine alloc] initWithHostName:@"ec2-184-72-89-97.compute-1.amazonaws.com"];
 
-    [wobbleEngine setPortNumber:3000];
+    [wobbleEngine setPortNumber:80];
 }
 
 - (void)viewDidUnload
