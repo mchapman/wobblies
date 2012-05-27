@@ -7,19 +7,27 @@ var util = require('util');
 
 var stream = {}
 
+// initialise routing mappings
 stream.initialise = function(app) {    
   app.get('/video/:user', stream.get);
   return app;
 };
 
+// get handler
 stream.get = function(req, res) {
+
+  // check user is in headers
+  /*
   var user = req.headers.user;
   if(user == undefined) {
     console.log('missing user');
     return res.send('no user', 404);
   }
+  */
 
   console.log('download belly video for ' + user);
+
+  // stream hardcoded mp4 from disk for now
   var path = 'videos/sample.mp4';  
   //var path = 'videos/' + user + '.mp4';
   var stat = fs.statSync(path);
@@ -45,4 +53,5 @@ stream.get = function(req, res) {
   }
 };
 
+// export modules
 module.exports = stream;

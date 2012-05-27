@@ -2,16 +2,19 @@ var express = require('express');
 var fs = require('fs');
 var knox = require('knox');
 
+// obtain aws keys from environment variables (THESE MUST BE SET FOR UPLOAD TO SUCCEED)
 var access = process.env.WOBBLIES_ACCESS_KEY;
 var secret = process.env.WOBBLIES_ACCESS_SECRET;
 
 var uploads = {}
 
+// initialise routing mappings
 uploads.initialise = function(app) {    
   app.post('/upload', uploads.upload);
   return app;
 };
 
+// handle upload post
 uploads.upload = function(req, res) {
   // validate user  
   var user = req.headers.user;
@@ -33,7 +36,7 @@ uploads.upload = function(req, res) {
   // create knox client for s3 upload
   var client = knox.createClient({ key: access, secret: secret, bucket: 'wobblies' });
 
-  // load file and upload to bucket
+  // read file and upload to bucket
   fs.readFile(req.files.upload.path, function(err, buf) {
     var s3req = client.put(name, { 'Content-Length': buf.length, 'Content-Type': 'text/plain' });
 
