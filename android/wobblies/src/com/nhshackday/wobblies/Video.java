@@ -36,6 +36,7 @@ private ProgressDialog progressDialog = null;
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.video);
+	    this.progressDialog = ProgressDialog.show(this, "Video", "Loading please wait...");   
 		mPreview = (SurfaceView) findViewById(R.id.surface);
         holder = mPreview.getHolder();
         holder.addCallback(this);
@@ -150,7 +151,6 @@ private ProgressDialog progressDialog = null;
 
     public void surfaceCreated(SurfaceHolder holder) {
         Log.d(TAG, "surfaceCreated called");
-        this.progressDialog = ProgressDialog.show(this, "Video", "Loading please wait...");
         playVideo(STREAM_VIDEO);
     }
 

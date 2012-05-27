@@ -8,15 +8,15 @@
     <LinearLayout android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_weight="2">
-        
     </LinearLayout>
+    
     <Button android:id="@+id/save"
         android:onClick="capture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:padding="5dp"
-        android:textSize="18sp"
+        android:padding="2dp"
+        android:textSize="15sp"
         android:textColor="@android:color/white"
         android:text="Capture"
         android:background="@drawable/button"
@@ -27,10 +27,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:padding="5dp"
-        android:text="Watch your progress"
-        android:textSize="18sp"
+        android:padding="2dp"
+        android:text="Video"
+        android:textSize="15sp"
         android:textColor="@android:color/white"
         android:background="@drawable/button"/>
      
+      <Button android:id="@+id/video"
+        android:onClick="watch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="2dp"
+        android:text="Watch your progress"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button"/>
+      
 </LinearLayout>
