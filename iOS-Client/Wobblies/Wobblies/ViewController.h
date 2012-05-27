@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
     WobbleEngine *wobbleEngine;
+    UIImage *lastImage;
 }
 
 - (BOOL) startCameraController;
@@ -19,5 +20,6 @@
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker;
 - (void) imagePickerController:(UIImagePickerController *)picker
  didFinishPickingMediaWithInfo:(NSDictionary *)info;
+- (void)onImageTaken:(UIImage *)image;
 
 @end
