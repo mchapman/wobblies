@@ -22,6 +22,7 @@
 //    wobbleEngine = [[WobbleEngine alloc] initWithHostName:@"ec2-184-72-89-97.compute-1.amazonaws.com"];
 
     [wobbleEngine setPortNumber:3000];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.49.149:3000"]]];
 }
 
 - (void)viewDidUnload
@@ -81,6 +82,8 @@
 {
     lastImage = image;
     [wobbleEngine pushImageToServer:image];
+    [webView setHidden:NO];
+    [imageView setHidden:YES];
 }
 
 - (UIView *)createCameraOverlay

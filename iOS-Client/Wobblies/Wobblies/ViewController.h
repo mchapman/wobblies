@@ -13,6 +13,8 @@
 {
     WobbleEngine *wobbleEngine;
     UIImage *lastImage;
+    IBOutlet UIWebView *webView;
+    IBOutlet UIImageView *imageView;
 }
 
 - (BOOL) startCameraController;
