@@ -19,6 +19,7 @@
 
 - (BOOL) startCameraController;
 - (IBAction)takePhoto:(id)sender;
+- (IBAction)toWebApp:(id)sender;
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker;
 - (void) imagePickerController:(UIImagePickerController *)picker
  didFinishPickingMediaWithInfo:(NSDictionary *)info;

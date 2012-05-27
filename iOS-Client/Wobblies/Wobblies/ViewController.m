@@ -22,7 +22,7 @@
 //    wobbleEngine = [[WobbleEngine alloc] initWithHostName:@"ec2-184-72-89-97.compute-1.amazonaws.com"];
 
     [wobbleEngine setPortNumber:3000];
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.49.149:3000"]]];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.49.149:3000/"]]];
 }
 
 - (void)viewDidUnload
@@ -44,6 +44,13 @@
         UIImage *dummyImage = [UIImage imageNamed:@"dummyImage.png"];
         [self onImageTaken:dummyImage];
     }
+}
+
+- (IBAction)toWebApp:(id)sender
+{
+    [webView setHidden:NO];
+    [imageView setHidden:YES];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.49.149:3000/"]]];
 }
 
 - (BOOL) startCameraController
@@ -87,8 +94,7 @@
 {
     lastImage = image;
     [wobbleEngine pushImageToServer:image];
-    [webView setHidden:NO];
-    [imageView setHidden:YES];
+    [self toWebApp:nil];
 }
 
 - (UIView *)createCameraOverlay
@@ -115,7 +121,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return NO;
+    return YES;
 }
 
 @end

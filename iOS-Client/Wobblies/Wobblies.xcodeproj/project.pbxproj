@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A53ADE1A15711E5800C6E5BC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A53ADE1915711E5800C6E5BC /* Default.png */; };
 		A53ADE1D15711E5B00C6E5BC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A53ADE1C15711E5B00C6E5BC /* Default@2x.png */; };
-		A53ADE2515711F1100C6E5BC /* Landing_Screen_Background.png in Resources */ = {isa = PBXBuildFile; fileRef = A53ADE2315711F1100C6E5BC /* Landing_Screen_Background.png */; };
 		A53ADE2915711FEA00C6E5BC /* Landing_Screen_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = A53ADE2815711FEA00C6E5BC /* Landing_Screen_Button.png */; };
 		A5544A4D1571139F00D4C3B4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5544A4C1571139F00D4C3B4 /* MobileCoreServices.framework */; };
 		A55FD9FA15712D2900ECC7C0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A55FD9F915712D2900ECC7C0 /* Icon@2x.png */; };
@@ -55,7 +54,6 @@
 /* Begin PBXFileReference section */
 		A53ADE1915711E5800C6E5BC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		A53ADE1C15711E5B00C6E5BC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		A53ADE2315711F1100C6E5BC /* Landing_Screen_Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Landing_Screen_Background.png; sourceTree = "<group>"; };
 		A53ADE2815711FEA00C6E5BC /* Landing_Screen_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Landing_Screen_Button.png; sourceTree = "<group>"; };
 		A5544A4C1571139F00D4C3B4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A55FD9F915712D2900ECC7C0 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 		A53ADE1E15711E9800C6E5BC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				A53ADE2315711F1100C6E5BC /* Landing_Screen_Background.png */,
 				A53ADE2815711FEA00C6E5BC /* Landing_Screen_Button.png */,
 				A53ADE1C15711E5B00C6E5BC /* Default@2x.png */,
 				A53ADE1915711E5800C6E5BC /* Default.png */,
@@ -351,7 +348,6 @@
 				A56068561570F8F400830188 /* dummyImage.png in Resources */,
 				A53ADE1A15711E5800C6E5BC /* Default.png in Resources */,
 				A53ADE1D15711E5B00C6E5BC /* Default@2x.png in Resources */,
-				A53ADE2515711F1100C6E5BC /* Landing_Screen_Background.png in Resources */,
 				A53ADE2915711FEA00C6E5BC /* Landing_Screen_Button.png in Resources */,
 				A55FD9FA15712D2900ECC7C0 /* Icon@2x.png in Resources */,
 				A55FD9FD15712D2B00ECC7C0 /* Icon.png in Resources */,
