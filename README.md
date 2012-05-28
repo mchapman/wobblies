@@ -4,7 +4,7 @@
 Written at the NHS Hackday (which was really a weekend) by:
 
 Mark Chapman (idea and tea boy)  
-Roy Lines (back end)  
+[Roy Lines(http://roylines.co.uk)] (back end)  
 Douglas Livingstone (iphone UI)  
 Youhana-Hana (Android UI)  
 Joseph Reeve (jQuery mobile front end)  
