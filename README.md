@@ -9,7 +9,7 @@ Douglas Livingstone (iPhone UI)
 Youhana-Hana (Android UI)  
 [Joseph Reeve](https://twitter.com/#!/JReeve0) (jQuery mobile front end)  
 
-Assisted by:
+Assisted by:  
 Sinan Mir (medical input - here comes the science)  
 Bruno Cepollina (visual design)  
 John Shaw, Paul Brewer (front end help and insights)  
