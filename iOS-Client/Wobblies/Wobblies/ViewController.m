@@ -1,10 +1,3 @@
-//
-//  ViewController.m
-//  Wobblies
-//
-//  Created by Douglas Livingstone on 26/05/2012.
-//  Copyright (c) 2012 Douglas Livingstone. All rights reserved.
-//
 
 #import "ViewController.h"
 #import "MobileCoreServices/UTCoreTypes.h"
@@ -46,11 +39,32 @@
     }
 }
 
-- (IBAction)toWebApp:(id)sender
+- (IBAction)toIntro:(id)sender
+{
+    [webView setHidden:YES];
+    [imageView setHidden:NO];
+}
+
+- (void)loadUrl:(NSURL *)url
 {
     [webView setHidden:NO];
     [imageView setHidden:YES];
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://192.168.49.149:3000/"]]];
+    [webView loadRequest:[NSURLRequest requestWithURL:url]];
+}
+
+- (IBAction)toWebAppHome:(id)sender
+{
+    [self loadUrl:[NSURL URLWithString:@"http://192.168.49.149:3000/"]];
+}
+
+- (IBAction)toWebVideo:(id)sender
+{
+    [self loadUrl:[NSURL URLWithString:@"http://192.168.49.149:3000/#video"]];
+}
+
+- (IBAction)toWebPledge:(id)sender
+{
+    [self loadUrl:[NSURL URLWithString:@"http://192.168.49.149:3000/#pledgeto"]];
 }
 
 - (BOOL) startCameraController
@@ -92,25 +106,19 @@
 
 - (void)onImageTaken:(UIImage *)image
 {
-    lastImage = image;
     [wobbleEngine pushImageToServer:image];
-    [self toWebApp:nil];
+    [self toWebAppHome:nil];
 }
 
 - (UIView *)createCameraOverlay
 {
-    if (!lastImage)
-    {
-        return nil;
-    }
-    
     // assume there is an instance of UIImagePickerController* named picker...
     // assume that there is a UIImage* property named overlayImage...
     UIImageView *overlay = [[UIImageView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // with an image sized to fit in the viewfinder window
     // (Resize using Trevor Harmon's UIImage+ categories)
-    overlay.image = lastImage;
+    overlay.image = [UIImage imageNamed:@"FatMan.png"];
     
     // tell the view to put the image at the top, and make it translucent
     overlay.contentMode = UIViewContentModeTop;            
@@ -121,7 +129,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return YES;
+    return interfaceOrientation == UIInterfaceOrientationPortrait;
 }
 
 @end

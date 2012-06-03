@@ -26,6 +26,8 @@
 		A560687D1570FEBB00830188 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A560687A1570FEBB00830188 /* CFNetwork.framework */; };
 		A560687E1570FEBB00830188 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A560687B1570FEBB00830188 /* Security.framework */; };
 		A560687F1570FEBB00830188 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A560687C1570FEBB00830188 /* SystemConfiguration.framework */; };
+		A56A89E7157246E500C71977 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56A89E5157246E500C71977 /* ViewController_iPad.xib */; };
+		A56A89E91572517F00C71977 /* FatMan.png in Resources */ = {isa = PBXBuildFile; fileRef = A56A89E81572517F00C71977 /* FatMan.png */; };
 		A59E3DEA1570E6F7005E05CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59E3DE91570E6F7005E05CA /* UIKit.framework */; };
 		A59E3DEC1570E6F7005E05CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59E3DEB1570E6F7005E05CA /* Foundation.framework */; };
 		A59E3DEE1570E6F7005E05CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59E3DED1570E6F7005E05CA /* CoreGraphics.framework */; };
@@ -33,7 +35,7 @@
 		A59E3DF61570E6F7005E05CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E3DF51570E6F7005E05CA /* main.m */; };
 		A59E3DFA1570E6F7005E05CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E3DF91570E6F7005E05CA /* AppDelegate.m */; };
 		A59E3DFD1570E6F7005E05CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59E3DFC1570E6F7005E05CA /* ViewController.m */; };
-		A59E3E001570E6F7005E05CA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59E3DFE1570E6F7005E05CA /* ViewController.xib */; };
+		A59E3E001570E6F7005E05CA /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A59E3DFE1570E6F7005E05CA /* ViewController_iPhone.xib */; };
 		A59E3E0B1570E6F8005E05CA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59E3E0A1570E6F8005E05CA /* SenTestingKit.framework */; };
 		A59E3E0C1570E6F8005E05CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59E3DE91570E6F7005E05CA /* UIKit.framework */; };
 		A59E3E0D1570E6F8005E05CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59E3DEB1570E6F7005E05CA /* Foundation.framework */; };
@@ -81,6 +83,8 @@
 		A560687A1570FEBB00830188 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		A560687B1570FEBB00830188 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A560687C1570FEBB00830188 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A56A89E6157246E500C71977 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		A56A89E81572517F00C71977 /* FatMan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FatMan.png; sourceTree = "<group>"; };
 		A59E3DE51570E6F7005E05CA /* Wobblies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wobblies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59E3DE91570E6F7005E05CA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A59E3DEB1570E6F7005E05CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -93,7 +97,7 @@
 		A59E3DF91570E6F7005E05CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A59E3DFB1570E6F7005E05CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A59E3DFC1570E6F7005E05CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A59E3DFF1570E6F7005E05CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		A59E3DFF1570E6F7005E05CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		A59E3E091570E6F8005E05CA /* WobbliesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WobbliesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59E3E0A1570E6F8005E05CA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A59E3E121570E6F8005E05CA /* WobbliesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WobbliesTests-Info.plist"; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 		A53ADE1E15711E9800C6E5BC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A56A89E81572517F00C71977 /* FatMan.png */,
 				A53ADE2815711FEA00C6E5BC /* Landing_Screen_Button.png */,
 				A53ADE1C15711E5B00C6E5BC /* Default@2x.png */,
 				A53ADE1915711E5800C6E5BC /* Default.png */,
@@ -234,7 +239,8 @@
 				A59E3DF91570E6F7005E05CA /* AppDelegate.m */,
 				A59E3DFB1570E6F7005E05CA /* ViewController.h */,
 				A59E3DFC1570E6F7005E05CA /* ViewController.m */,
-				A59E3DFE1570E6F7005E05CA /* ViewController.xib */,
+				A59E3DFE1570E6F7005E05CA /* ViewController_iPhone.xib */,
+				A56A89E5157246E500C71977 /* ViewController_iPad.xib */,
 				A56068741570FBB100830188 /* WobbleEngine.h */,
 				A56068751570FBB100830188 /* WobbleEngine.m */,
 				A59E3DF01570E6F7005E05CA /* Supporting Files */,
@@ -344,13 +350,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A59E3DF41570E6F7005E05CA /* InfoPlist.strings in Resources */,
-				A59E3E001570E6F7005E05CA /* ViewController.xib in Resources */,
+				A59E3E001570E6F7005E05CA /* ViewController_iPhone.xib in Resources */,
 				A56068561570F8F400830188 /* dummyImage.png in Resources */,
 				A53ADE1A15711E5800C6E5BC /* Default.png in Resources */,
 				A53ADE1D15711E5B00C6E5BC /* Default@2x.png in Resources */,
 				A53ADE2915711FEA00C6E5BC /* Landing_Screen_Button.png in Resources */,
 				A55FD9FA15712D2900ECC7C0 /* Icon@2x.png in Resources */,
 				A55FD9FD15712D2B00ECC7C0 /* Icon.png in Resources */,
+				A56A89E7157246E500C71977 /* ViewController_iPad.xib in Resources */,
+				A56A89E91572517F00C71977 /* FatMan.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +427,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A56A89E5157246E500C71977 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A56A89E6157246E500C71977 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
 		A59E3DF21570E6F7005E05CA /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -427,12 +443,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		A59E3DFE1570E6F7005E05CA /* ViewController.xib */ = {
+		A59E3DFE1570E6F7005E05CA /* ViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A59E3DFF1570E6F7005E05CA /* en */,
 			);
-			name = ViewController.xib;
+			name = ViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
 		A59E3E131570E6F8005E05CA /* InfoPlist.strings */ = {
